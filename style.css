@@ -34,10 +34,9 @@ input {
   border: 0;
   padding: 8px;
   font-size: 18px;
-  color: #abd9ff;
 }
 
-button {
+#searchBtn {
   height: 61px;
   width: 83px;
   border-bottom-right-radius: 8px;
@@ -46,15 +45,34 @@ button {
   border: 0;
   background: #fff6bf;
   cursor: pointer;
+  color: #32404c;
+}
+
+.showmorebtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  border-radius: 8px;
+}
+
+.showmorebtn button {
+  height: 61px;
+  width: 140px;
+  border-radius: 8px;
+  outline: 0;
+  border: 0;
+  background: #fff6bf;
+  cursor: pointer;
+  color: #32404c;
+  display: none;
 }
 
 @media screen and (max-width: 680px) {
   input {
-    
     width: 60%;
     height: 45px;
     align-items: center;
     justify-content: center;
-
   }
 }
