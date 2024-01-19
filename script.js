@@ -12,12 +12,20 @@ async function getImages() {
     let response = await fetch(url);
     let data = await response.json();
     console.log(data)
+    let results = data.results;
+    results.map((result)=>{
+        let images = document.createElement('img');
+        images.src = result.urls.small;
+        let imageLink = document.createElement('a');
+        imageLink.href = results.link.html;
+        imageLink.target = '_blank';
+        imageLink.appendChild(images);
+        imageresult.appendChild(imageLink)
+    })
 }
 
-searchForm.addEventListener('keydown', (e) => {
+searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
     page = 1;
-    if (e.key === 'Enter') {
-        getImages()
-    }
+    getImages()
 })
